@@ -1,0 +1,9 @@
+project: savantenvs/reshade
+target: fuzz_preprocessor
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_preprocessor/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_preprocessor
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_preprocessor/fuzz_preprocessor.dict

@@ -1,0 +1,9 @@
+# Build-context pruning for mayhem/Dockerfile. .git is deliberately kept (the image holds the full branch history).
+build/
+examples/
+setup/
+*.md
+Doxyfile
+*.sln
+*.vcxproj
+*.vcxproj.filters

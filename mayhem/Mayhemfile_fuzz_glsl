@@ -1,0 +1,9 @@
+project: savantenvs/reshade
+target: fuzz_glsl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_glsl/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_glsl
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_glsl/fuzz_glsl.dict

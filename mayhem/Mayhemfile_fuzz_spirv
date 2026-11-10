@@ -1,0 +1,9 @@
+project: savantenvs/reshade
+target: fuzz_spirv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_spirv/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_spirv
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_spirv/fuzz_spirv.dict
